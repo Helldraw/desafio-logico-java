@@ -4,8 +4,8 @@ public class NumerosLoteria {
 		int qtdeNum = 6;
 
 		
-		System.out.println("Bem-vindo ao gerador de numeros para a loteria");
-		System.out.println("Segue abaixo numeros criados de forma aleatoria: ");
+		System.out.println("Bem-vindo ao gerador de números para a loteria");
+		System.out.println("Segue abaixo números criados de forma aleatoria: ");
 		metodo(qtdeNum);
 	}
 		
@@ -15,8 +15,12 @@ public class NumerosLoteria {
 		for (int i = 0; i < loteria; i++) {
 			double randomNumber = Math.random()*60.9;
 			numeros[i] = (int)randomNumber;
+			if(numeros[i]==0){
+				numeros[i]=(int)randomNumber;
+				i--;
+			}
 				for(int j = i-1; j >=0;j--) {
-					while(numeros[i] == numeros[j] || numeros[i] == 0) {
+					while(numeros[i] == numeros[j]) {
 						randomNumber = Math.random()*60.9;
 						System.out.println("Num i: " + numeros[i] + " Num j: " + numeros[j]);
 						numeros[i]=(int)randomNumber;
@@ -26,7 +30,7 @@ public class NumerosLoteria {
 				}
 		}
 		for (int random:numeros) {
-			System.out.println(random);
+			System.out.printf("%02d\n",random);
 		}
 		
 	}

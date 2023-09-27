@@ -20,8 +20,6 @@ public class Mdc {
 					int a = numeros[j];
 					numeros[j] = numeros[i];
 					numeros[i] = a;
-					
-					
 				}
 				
 			}
@@ -40,9 +38,7 @@ public class Mdc {
 				w--;
 			}
 		}
-
-			System.out.println("O MDC dos números digitados é: " + w);
-		
+		System.out.println("O MDC dos números digitados é: " + w);
 		entrada.close();
 	}
 		
