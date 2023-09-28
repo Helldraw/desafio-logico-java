@@ -29,7 +29,7 @@ public class TemperaturaMedia {
 	Integer x = 1;
 	Temperatura maior= new Temperatura(" ", 0d);
 	for(Temperatura t : temperatura) {
-		if(t.getTemperatura() > media(0d,6)) {
+		if(t.getTemperatura() > media(0d,temperatura.size())) {
 			System.out.println(x+ "-"+ t.getMes() +" - "+ t.getTemperatura());
 			if(maior.getTemperatura() < t.getTemperatura()) {
 				maior.setMes(t.getMes());
